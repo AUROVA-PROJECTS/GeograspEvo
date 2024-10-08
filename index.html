@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
   <!-- Replace the content tag with appropriate information -->
-  <meta name="description" content="Robust Single Object Tracking and Pedestrian Following by Fusion Strategy">
-  <meta property="og:title" content="Robust Single Object Tracking and Following by Fusion Strategy"/>
-  <meta property="og:description" content="Robust Single Object Tracking and Pedestrian Following by Fusion Strategy"/>
+  <meta name="description" content="GeoGraspEvo: Multifinger 6DoF Grasp Pose Estimation">
+  <meta property="og:title" content="GeoGraspEvo: Multifinger 6DoF Grasp Pose Estimation"/>
+  <meta property="og:description" content="GeoGraspEvo: Multifinger 6DoF Grasp Pose Estimation"/>
   <meta property="og:url" content="https://aurova-projects.github.io/tracker_fusion/"/>
   <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
   <meta property="og:image" content="static/images/EKFdiagramICINCO.png" />
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>Robust Single Object Tracking and Following by Fusion Strategy</title>
+  <title>GeoGraspEvo: Multifinger 6DoF Grasp Pose Estimation</title>
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
@@ -56,20 +56,17 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Robust Single Object Tracking and Following by Fusion Strategy</h1>
+            <h1 class="title is-1 publication-title">GeoGraspEvo: Multifinger 6DoF Grasp Pose Estimation</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
-                Alejandro Olivas,
+                Ignacio de Loyola Páez-Ubieta,
               </span>
               <span class="author-block">
-                Miguel Ángel Muñoz-Bañón,
+                Daniel Frau-Alfaro,
               </span>
               <span class="author-block">
-                Edison Velasco,
-              </span>
-              <span class="author-block">
-                Fernando Torres
+                Santiago T. Puente,
               </span>
             </div>
 
@@ -78,7 +75,7 @@
             </div>
 
             <div class="is-size-8 publication-authors">
-              <span class="author-block"><a href="mailto:alejandro.olivas@ua.es" target="_blank">alejandro.olivas@ua.es</a></span>
+              <span class="author-block"><a href="mailto:ignacio.paez@ua.es" target="_blank">ignacio.paez@ua.es</a></span>
             </div>
 
             <div class="column has-text-centered">
@@ -154,23 +151,22 @@
 <!-- End video carousel -->
 
 <!-- Youtube video -->
-<section class="hero is-small is-light">
+<!-- <section class="hero is-small is-light">
   <div class="hero-body">
     <div class="container">
-      <!-- Paper video. -->
+
       <h2 class="title is-3">Video Presentation</h2>
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
           
           <div class="publication-video">
-            <!-- Youtube embed code here -->
             <iframe src="https://www.youtube.com/embed/n7d_BEgYg2k?si=oAVwz-0R4a1M0xAF" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
           </div>
         </div>
       </div>
     </div>
   </div>
-</section>
+</section> -->
 <!-- End youtube video -->
 
 
@@ -183,15 +179,10 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Single Object Tracking methods are yet not robust enough because they may lose the target due to occlusions or
-            changes in the target’s appearance, and it is difficult to detect automatically when they fail. To deal with these
-            problems, we design a novel method to improve object tracking by fusing complementary types of trackers,
-            taking advantage of each other’s strengths, with an Extended Kalman Filter to combine them in a probabilistic
-            way. The environment perception is performed with a 3D LiDAR sensor, so we can track the object in the point
-            cloud and also in the front-view image constructed from the point cloud. We use our tracker-fusion method in
-            a mobile robot to follow pedestrians, also considering the dynamic obstacles in the environment to avoid them.
-            We show that our method allows the robot to follow the target accurately during long experimental sessions
-            where the trackers independently fail, demonstrating the robustness of our tracker-fusion strategy.
+            Grasping objects is a simple task for humans, but transferring this ability to robots is much more complex. Traditionally, existing methods can be grouped into two separate categories: analytical and data-driven. In recent years, thanks to the increase in computing capabilities, the research community has focused its attention on the second group of algorithms. 
+In this article, we propose a new grasping method called GeoGraspEvo. It belongs to the group of analytical methods and allows to obtain the best combination of grasping points for multi-finger grippers, starting from only three fingers. The whole procedure is explained, starting from some gripper parameters and a RGBD image, through the extraction of the gripping areas and candidates, to the developed ranking functions. Experiments are performed on a well-known dataset in both simulation and real world with a three-finger gripper to show the quality of the presented method.
+The results show a successful grasping rate of 91.46% in simulation and 81.46% in real world with different shaped objects with an execution time of 120 ms and 83 ms respectively. 
+With these results, we are able to match and improve some state-of-the-art methods in accuracy and computation time in both of the aforementioned categories, just by using CPU capabilities with a generalist method, avoiding dataset generation or long GPU training times.
           </p>
         </div>
       </div>
@@ -204,9 +195,19 @@
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
-        <img src="static/images/EKFdiagramICINCO.png" alt="Diagram Robust Single Object Tracking and Following by Fusion Strategy" class="center" width="50%"/>
+        <img src="static/images/Fig1.jpg" alt="Gripper modeling for GeoGraspEvo," class="center" width="50%"/>
         <h2 class="subtitle has-text-centered">
-          Diagram of our tracker-fusion method.
+          Gripper modeling for GeoGraspEvo.
+        </h2>
+</div>
+</div>
+</section>
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+        <img src="static/images/GeoGraspEvo_parts.png" alt="GeoGraspEvo parts." class="center" width="85%"/>
+        <h2 class="subtitle has-text-centered">
+          GeoGraspEvo parts of the algorithm.
         </h2>
 </div>
 </div>
@@ -214,7 +215,7 @@
 <!-- End image carousel -->
 
 
-<section class="hero is-small">
+<!-- <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
       <div id="gif-carousel" class="carousel results-carousel">
@@ -227,7 +228,7 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 
 <!-- Paper poster -->
 <!-- <section class="hero is-small is-light">
@@ -245,7 +246,7 @@
 
 
 <!--BibTex citation -->
-  <section class="section" id="BibTeX">
+  <!-- <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
       <pre><code>
@@ -263,7 +264,7 @@
 }
     </code></pre>
     </div>
-</section>
+</section> -->
 <!--End BibTex citation -->
 
 
